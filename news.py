@@ -18,11 +18,6 @@ if not os.path.exists(model_path):
 model = joblib.load(model_path)
 
 
-
-model = joblib.load("modells1.pkl")
-print("Model loaded successfully")
-
-
 st.markdown("""
    <h1 style='color:#53299F;'> Fake News Detection</h1>
 
