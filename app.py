@@ -5,7 +5,8 @@ import os
 import urllib.request
 # import gdown
 
-model_url = "https://huggingface.co/datasets/kishlayambastha/fakenews-model/blob/main/modells1.pkl"
+model_url = "https://huggingface.co/datasets/kishlayambastha/fakenews-model/resolve/main/modells1.pkl"
+
 # file_id = "1TLwuRLBCQbQkKLI9-YKNzF78Y2q9JIdK"
 model_path = "modells1.pkl"
 # download_url = f"https://drive.google.com/uc?id={file_id}"
