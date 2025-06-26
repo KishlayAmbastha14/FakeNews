@@ -13,7 +13,7 @@ model_path = "modells1.pkl"
 if not os.path.exists(model_path):
     urllib.request.urlretrieve(model_url, model_path)
 
-model = joblib.load('modells1.pkl')
+model = joblib.load(model_path)
 
 st.markdown("""
    <h1 style='color:#53299F;'> Fake News Detection</h1>
