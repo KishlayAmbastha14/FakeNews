@@ -5,8 +5,6 @@ import os
 # import urllib.request
 import gdown
 
-model = joblib.load(model_path)
-
 # model_url = "https://drive.google.com/uc?id=1TLwuRLBCQbQkKLI9-YKNzF78Y2q9JIdK"
 file_id = "1TLwuRLBCQbQkKLI9-YKNzF78Y2q9JIdK"
 model_path = "modells1.pkl"
