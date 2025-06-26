@@ -1,4 +1,4 @@
 streamlit 
-PyMuPDF
+gdown
 scikit-learn
 nltk
