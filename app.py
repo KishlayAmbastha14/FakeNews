@@ -11,6 +11,7 @@ model_path = "modells1.pkl"
 download_url = f"https://drive.google.com/uc?id={file_id}"
 
 
+st.info(f"Working directory: {os.getcwd()}")
 # if not os.path.exists(model_path):
 #     gdown.download(f"https://drive.google.com/uc?id={file_id}", model_path, quiet=False)
 if not os.path.exists(model_path):
@@ -22,11 +23,17 @@ if not os.path.exists(model_path):
         st.error(f"Model download failed: {e}")
         st.stop()
 
+
+if not os.path.exists(model_path):
+    st.error("Model file still not found after download. Check if the link is valid or download failed.")
+    st.stop()
 try:
     model = joblib.load(model_path)
 except Exception as e:
     st.error(f"Model loading failed: {e}")
     st.stop()
+
+
 
 
 st.markdown("""
