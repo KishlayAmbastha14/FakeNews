@@ -5,17 +5,30 @@ import os
 # import urllib.request
 import gdown
 
-# joblib.dump(model_path,"modells1.pkl")
+model = joblib.load(model_path)
 
 # model_url = "https://drive.google.com/uc?id=1TLwuRLBCQbQkKLI9-YKNzF78Y2q9JIdK"
 file_id = "1TLwuRLBCQbQkKLI9-YKNzF78Y2q9JIdK"
 model_path = "modells1.pkl"
+download_url = f"https://drive.google.com/uc?id={file_id}"
 
 
+# if not os.path.exists(model_path):
+#     gdown.download(f"https://drive.google.com/uc?id={file_id}", model_path, quiet=False)
 if not os.path.exists(model_path):
-    gdown.download(f"https://drive.google.com/uc?id={file_id}", model_path, quiet=False)
+    try:
+        st.info("Downloading model...")
+        gdown.download(download_url, model_path, quiet=False)
+        st.success("Download complete.")
+    except Exception as e:
+        st.error(f"Model download failed: {e}")
+        st.stop()
 
-model = joblib.load(model_path)
+try:
+    model = joblib.load(model_path)
+except Exception as e:
+    st.error(f"Model loading failed: {e}")
+    st.stop()
 
 
 st.markdown("""
