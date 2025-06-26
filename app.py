@@ -11,17 +11,17 @@ st.info(f"📁 Working directory: {os.getcwd()}")
 
 if not os.path.exists(model_path):
     try:
-        st.info("📥 Downloading model...")
+        # st.info("📥 Downloading model...")
         urllib.request.urlretrieve(model_url, model_path)
-        st.success("✅ Download complete.")
-        st.write("Model size:", os.path.getsize(model_path), "bytes")
+        # st.success("✅ Download complete.")
+        # st.write("Model size:", os.path.getsize(model_path), "bytes")
     except Exception as e:
         st.error(f"❌ Model download failed: {e}")
         st.stop()
 
 try:
     model = joblib.load(model_path)
-    st.success("✅ Model loaded successfully")
+    # st.success("✅ Model loaded successfully")
 except Exception as e:
     st.error(f"❌ Model loading failed: {e}")
     st.stop()
