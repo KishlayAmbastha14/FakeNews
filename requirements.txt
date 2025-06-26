@@ -1,4 +1,6 @@
-streamlit 
+streamlit
+scikit-learn==1.2.2
+joblib
 gdown
-scikit-learn
-nltk
+numpy
+pandas
