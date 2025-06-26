@@ -7,7 +7,7 @@ import urllib.request
 model_url = "https://huggingface.co/datasets/kishlayambastha/fakenews-model/resolve/main/modells1.pkl"
 model_path = "modells1.pkl"
 
-st.info(f"📁 Working directory: {os.getcwd()}")
+# st.info(f"📁 Working directory: {os.getcwd()}")
 
 if not os.path.exists(model_path):
     try:
